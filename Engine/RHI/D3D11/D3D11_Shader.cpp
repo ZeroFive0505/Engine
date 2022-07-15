@@ -1,0 +1,141 @@
+#include "Common.h"
+#include "../RHI_Implementation.h"
+#include "../RHI_Shader.h"
+#include "../RHI_InputLayout.h"
+#include <d3dcompiler.h>
+#include "../../Core/FileSystem.h"
+
+using namespace std;
+
+
+namespace PlayGround
+{
+    RHI_Shader::~RHI_Shader()
+    {
+        d3d11_utility::release<ID3D11VertexShader>(m_resource);
+    }
+
+    void* RHI_Shader::GetResource() const
+    {
+        return m_resource;
+    }
+
+    void* RHI_Shader::Compile2()
+    {
+        ASSERT(m_rhi_device != nullptr);
+        ID3D11Device5* d3d11_device = m_rhi_device->GetContextRhi()->device;
+        ASSERT(d3d11_device != nullptr);
+
+        uint32_t compile_flags = 0;
+#ifdef _DEBUG
+        compile_flags |= D3DCOMPILE_DEBUG | D3DCOMPILE_PREFER_FLOW_CONTROL;
+#else
+        compile_flags |= D3DCOMPILE_ENABLE_STRICTNESS | D3DCOMPILE_OPTIMIZATION_LEVEL3;
+#endif
+
+        vector<D3D_SHADER_MACRO> defines =
+        {
+            D3D_SHADER_MACRO{ "VS", m_shader_type == RHI_Shader_Vertex ? "1" : "0" },
+            D3D_SHADER_MACRO{ "PS", m_shader_type == RHI_Shader_Pixel ? "1" : "0" },
+            D3D_SHADER_MACRO{ "CS", m_shader_type == RHI_Shader_Compute ? "1" : "0" }
+        };
+        for (const auto& define : m_defines)
+        {
+            defines.emplace_back(D3D_SHADER_MACRO{ define.first.c_str(), define.second.c_str() });
+        }
+        defines.emplace_back(D3D_SHADER_MACRO{ nullptr, nullptr });
+
+        ID3DBlob* blob_error = nullptr;
+        ID3DBlob* shader_blob = nullptr;
+        HRESULT result = D3DCompile
+        (
+            m_source.c_str(),
+            static_cast<SIZE_T>(m_source.size()),
+            nullptr,
+            defines.data(),
+            nullptr,
+            GetEntryPoint(),
+            GetTargetProfile(),
+            compile_flags,
+            0,
+            &shader_blob,
+            &blob_error
+        );
+
+        if (blob_error)
+        {
+            stringstream ss(static_cast<char*>(blob_error->GetBufferPointer()));
+            string line;
+            while (getline(ss, line, '\n'))
+            {
+                const auto is_error = line.find("error") != string::npos;
+                if (is_error)
+                {
+                    LOG_ERROR(m_ObjectName + "(" + FileSystem::GetStringAfterExpression(line, "("));
+                }
+                else
+                {
+                    LOG_WARNING(m_ObjectName + "(" + FileSystem::GetStringAfterExpression(line, "("));
+                }
+            }
+
+            blob_error->Release();
+            blob_error = nullptr;
+        }
+
+        if (FAILED(result) || !shader_blob)
+        {
+            LOG_ERROR("An error occurred when trying to load and compile \"%s\"", m_ObjectName.c_str());
+        }
+
+        void* shader_view = nullptr;
+        if (shader_blob)
+        {
+            if (m_shader_type == RHI_Shader_Vertex)
+            {
+                if (!d3d11_utility::error_check(d3d11_device->CreateVertexShader(shader_blob->GetBufferPointer(), shader_blob->GetBufferSize(), nullptr, reinterpret_cast<ID3D11VertexShader**>(&shader_view))))
+                {
+                    LOG_ERROR("Failed to create vertex shader");
+                }
+
+                if (!m_input_layout->Create(m_vertex_type, shader_blob))
+                {
+                    LOG_ERROR("Failed to create input layout for %s", FileSystem::GetFileNameFromFilePath(m_ObjectName).c_str());
+                }
+            }
+            else if (m_shader_type == RHI_Shader_Pixel)
+            {
+                if (!d3d11_utility::error_check(d3d11_device->CreatePixelShader(shader_blob->GetBufferPointer(), shader_blob->GetBufferSize(), nullptr, reinterpret_cast<ID3D11PixelShader**>(&shader_view))))
+                {
+                    LOG_ERROR("Failed to create pixel shader");
+                }
+            }
+            else if (m_shader_type == RHI_Shader_Compute)
+            {
+                if (!d3d11_utility::error_check(d3d11_device->CreateComputeShader(shader_blob->GetBufferPointer(), shader_blob->GetBufferSize(), nullptr, reinterpret_cast<ID3D11ComputeShader**>(&shader_view))))
+                {
+                    LOG_ERROR("Failed to create compute shader");
+                }
+            }
+
+            shader_blob->Release();
+            shader_blob = nullptr;
+        }
+
+        return shader_view;
+    }
+
+    void RHI_Shader::Reflect(const RHI_Shader_Type shader_type, const uint32_t* ptr, uint32_t size)
+    {
+
+    }
+
+    const char* RHI_Shader::GetTargetProfile() const
+    {
+        if (m_shader_type == RHI_Shader_Vertex)  return "vs_5_0";
+        if (m_shader_type == RHI_Shader_Pixel)   return "ps_5_0";
+        if (m_shader_type == RHI_Shader_Compute) return "cs_5_0";
+
+        return nullptr;
+    }
+}

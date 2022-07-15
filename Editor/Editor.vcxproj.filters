@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{c17bee1a-489f-48d8-81d6-916dc04c9ce5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui\Backend">
+      <UniqueIdentifier>{75c04af6-bd24-4948-b736-a124ebc67d62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui\Source">
+      <UniqueIdentifier>{87732feb-6de9-4cf2-85a9-c48a89262b4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Widgets">
+      <UniqueIdentifier>{1db4ce09-6d53-4e35-bbc5-4587de2a12ca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ImGui\Backend\imgui_impl_sdl.cpp">
+      <Filter>ImGui\Backend</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\Source\imgui.cpp">
+      <Filter>ImGui\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\Source\imgui_demo.cpp">
+      <Filter>ImGui\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\Source\imgui_draw.cpp">
+      <Filter>ImGui\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\Source\imgui_freetype.cpp">
+      <Filter>ImGui\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\Source\imgui_stdlib.cpp">
+      <Filter>ImGui\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\Source\imgui_tables.cpp">
+      <Filter>ImGui\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\Source\imgui_widgets.cpp">
+      <Filter>ImGui\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\ColorPicker.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\Console.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\Profiler.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\ProgressDialog.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\Properties.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\RenderOptions.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\ResourceViewer.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\TextureViewer.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\ToolBar.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\Viewport.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\Widget.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\WorldViewer.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor.cpp" />
+    <ClCompile Include="IconProvider.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Widgets\FileDialog.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\MenuBar.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ImGui\Backend\imgui_impl_sdl.h">
+      <Filter>ImGui\Backend</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Backend\imGui_RHI.h">
+      <Filter>ImGui\Backend</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Source\imconfig.h">
+      <Filter>ImGui\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Source\imgui.h">
+      <Filter>ImGui\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Source\imgui_freetype.h">
+      <Filter>ImGui\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Source\imgui_internal.h">
+      <Filter>ImGui\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Source\imgui_stdlib.h">
+      <Filter>ImGui\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Source\imstb_rectpack.h">
+      <Filter>ImGui\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Source\imstb_textedit.h">
+      <Filter>ImGui\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Source\imstb_truetype.h">
+      <Filter>ImGui\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\ColorPicker.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\Console.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\ImGuiHelper.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\Profiler.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\ProgressDialog.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\Properties.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\RenderOptions.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\ResourceViewer.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\TextureViewer.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\ToolBar.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\Viewport.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\Widget.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\WorldViewer.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor.h" />
+    <ClInclude Include="IconProvider.h" />
+    <ClInclude Include="Widgets\FileDialog.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="Widgets\MenuBar.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

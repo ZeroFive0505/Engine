@@ -1,0 +1,853 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{4d5c8c9a-756e-4b87-a942-0d0f3fe608bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{7639afd1-eef7-4297-86e4-766a1b44230a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{2859cf4e-1c02-41e2-9c2e-289919403ed1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Components">
+      <UniqueIdentifier>{a2883fbf-b483-4a51-9106-7bbf1f2fe46e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Display">
+      <UniqueIdentifier>{187d2121-9190-4969-8cee-e0d75a6c5ca7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{c02b6408-2f61-4492-8419-3f5eec18a58e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{c07a1c68-ecb0-43ba-a201-642ffee47a2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{41377c66-0811-45e2-b786-8b71faab7fe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RHI">
+      <UniqueIdentifier>{2c87fcb7-6ece-4c5f-9b26-3cbbac334849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RHI\D3D11">
+      <UniqueIdentifier>{f346cb7a-66d3-4a42-b8b5-193a609bf086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IO">
+      <UniqueIdentifier>{7ab14199-6082-4ea7-8b93-bb35a585ab48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threading">
+      <UniqueIdentifier>{ce904db9-8a93-4117-bc1b-6bce4de81da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{3541574f-d3ac-4199-baae-ae176d48806c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Importer">
+      <UniqueIdentifier>{5f0b5cd9-8e47-4fe0-800f-ff08ee26da49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{655cff6b-bf66-4d95-9cc6-ebb6b6db5f30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{b4743440-b707-4907-b8d8-1cbce02ff756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Profiling">
+      <UniqueIdentifier>{db02cf79-0873-4203-ab29-c98a1d4ff333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renedering">
+      <UniqueIdentifier>{4db4a38d-a1aa-4803-bf95-ce00b04fd283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renedering\Font">
+      <UniqueIdentifier>{413cf451-96af-4378-8ce2-9e76b0f61fe2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\TransformHandle">
+      <UniqueIdentifier>{9d0a73aa-d49c-418e-aa8f-4460d2c15b10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{0a0f79cd-2fb7-44ed-9f61-1202ec34b2e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log\Logger.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\IComponent.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\EngineObject.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Window.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Engine.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Timer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Display\Display.cpp">
+      <Filter>Display</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector2.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\Input.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector4.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Matrix.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Quaternion.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\BoundingBox.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\FileSystem.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\RHI_Device.cpp">
+      <Filter>RHI</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\RHI_CommandPool.cpp">
+      <Filter>RHI</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\RHI_Viewport.cpp">
+      <Filter>RHI</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\RHI_Sampler.cpp">
+      <Filter>RHI</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\FileStream.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_Sampler.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\Transform.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Entity.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Threading\Threading.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Frustum.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Plane.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Ray.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Rectangle.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Sphere.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\IResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Importer\FontImporter.cpp">
+      <Filter>Resource\Importer</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\RHI_Texture.cpp">
+      <Filter>RHI</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Importer\ImageImporter.cpp">
+      <Filter>Resource\Importer</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\RHI_Shader.cpp">
+      <Filter>RHI</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\RHI_PipelineState.cpp">
+      <Filter>RHI</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\RHI_CommandList.cpp">
+      <Filter>RHI</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\RHI_DescriptorSetLayout.cpp">
+      <Filter>RHI</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\Importer\ModelImporter.cpp">
+      <Filter>Resource\Importer</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\ResourceCache.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Settings.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\AudioClip.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\Audio.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\Physics.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\XmlDocument.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\PhysicsDebugDraw.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Profiling\TimeBlock.cpp">
+      <Filter>Profiling</Filter>
+    </ClCompile>
+    <ClCompile Include="Profiling\Profiler.cpp">
+      <Filter>Profiling</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Font\Font.cpp">
+      <Filter>Renedering\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Animation.cpp">
+      <Filter>Renedering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Grid.cpp">
+      <Filter>Renedering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Material.cpp">
+      <Filter>Renedering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Mesh.cpp">
+      <Filter>Renedering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Model.cpp">
+      <Filter>Renedering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Renderer.cpp">
+      <Filter>Renedering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Renderer_Primitives.cpp">
+      <Filter>Renedering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Renderer_Resources.cpp">
+      <Filter>Renedering</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\AudioListener.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\AudioSource.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\Camera.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\Collider.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\Constraint.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\Environment.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\Light.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\ReflectionProbe.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\Renderable.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\RigidBody.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\Components\Terrain.cpp">
+      <Filter>World\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="World\World.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="World\TransformHandle\TransformHandle.cpp">
+      <Filter>World\TransformHandle</Filter>
+    </ClCompile>
+    <ClCompile Include="World\TransformHandle\TransformOperator.cpp">
+      <Filter>World\TransformHandle</Filter>
+    </ClCompile>
+    <ClCompile Include="World\TransformHandle\TransformOperatorAxis.cpp">
+      <Filter>World\TransformHandle</Filter>
+    </ClCompile>
+    <ClCompile Include="World\TransformHandle\TransformScale.cpp">
+      <Filter>World\TransformHandle</Filter>
+    </ClCompile>
+    <ClCompile Include="World\TransformHandle\TransformRotation.cpp">
+      <Filter>World\TransformHandle</Filter>
+    </ClCompile>
+    <ClCompile Include="World\TransformHandle\TransformPosition.cpp">
+      <Filter>World\TransformHandle</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_BlendState.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_CommandPool.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_ConstantBuffer.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Renderer_Passes.cpp">
+      <Filter>Renedering</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_CommandList.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_DepthStencilState.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_DescriptorSet.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_DescriptorSetLayout.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_Device.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_Fence.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_IndexBuffer.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_InputLayout.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_Pipeline.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_RasterizerState.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_Semaphore.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_Shader.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_StructuredBuffer.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_SwapChain.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_Texture.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="RHI\D3D11\D3D11_VertexBuffer.cpp">
+      <Filter>RHI\D3D11</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineDefinition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SubModule.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\ILogger.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\Logger.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\IComponent.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\EngineObject.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Window.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Engine.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Context.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Timer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Display\DisplayMode.h">
+      <Filter>Display</Filter>
+    </ClInclude>
+    <ClInclude Include="Display\Display.h">
+      <Filter>Display</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\MathUtil.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\Input.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Matrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Quaternion.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Variant.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Hash.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Sampling.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\BoundingBox.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\FileSystem.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\StopWatch.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_VertexBuffer.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Implementation.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Definition.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_PhysicalDevice.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Descriptor.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_DescriptorSet.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Device.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_CommandPool.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Vertex.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Viewport.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_SwapChain.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_StructuredBuffer.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Semaphore.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Sampler.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_RasterizerState.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_ConstantBuffer.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\D3D11\D3D11_Utility.h">
+      <Filter>RHI\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_DepthStencilState.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Fence.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_IndexBuffer.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\FileStream.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\Transform.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\EventSystem.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Entity.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Threading\Threading.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Frustum.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Plane.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Ray.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\RayHit.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Rectangle.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Sphere.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\IResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\ProgressTracker.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Importer\FontImporter.h">
+      <Filter>Resource\Importer</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Texture.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Texture2D.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Importer\ImageImporter.h">
+      <Filter>Resource\Importer</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Texture2DArray.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Shader.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_PipelineState.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_BlendState.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_CommandList.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_DescriptorSetLayout.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_DirectXShaderCompiler.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_Pipeline.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_TextureCube.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Importer\ModelImporter.h">
+      <Filter>Resource\Importer</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\ResourceCache.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Settings.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\AudioClip.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\Audio.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="RHI\RHI_InputLayout.h">
+      <Filter>RHI</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\BulletPhysicsHelper.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\Physics.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\XmlDocument.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\PhysicsDebugDraw.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Profiling\TimeBlock.h">
+      <Filter>Profiling</Filter>
+    </ClInclude>
+    <ClInclude Include="Profiling\Profiler.h">
+      <Filter>Profiling</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Font\Font.h">
+      <Filter>Renedering\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Font\Glyph.h">
+      <Filter>Renedering\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Animation.h">
+      <Filter>Renedering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Grid.h">
+      <Filter>Renedering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Material.h">
+      <Filter>Renedering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Mesh.h">
+      <Filter>Renedering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Model.h">
+      <Filter>Renedering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Renderer.h">
+      <Filter>Renedering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Renderer_ConstantBuffers.h">
+      <Filter>Renedering</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Geometry.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\AudioListener.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\AudioSource.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\Camera.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\Collider.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\Constraint.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\Environment.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\Light.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\ReflectionProbe.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\Renderable.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\RigidBody.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\Components\Terrain.h">
+      <Filter>World\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="World\World.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="World\TransformHandle\TransformEnums.h">
+      <Filter>World\TransformHandle</Filter>
+    </ClInclude>
+    <ClInclude Include="World\TransformHandle\TransformHandle.h">
+      <Filter>World\TransformHandle</Filter>
+    </ClInclude>
+    <ClInclude Include="World\TransformHandle\TransformOperator.h">
+      <Filter>World\TransformHandle</Filter>
+    </ClInclude>
+    <ClInclude Include="World\TransformHandle\TransformOperatorAxis.h">
+      <Filter>World\TransformHandle</Filter>
+    </ClInclude>
+    <ClInclude Include="World\TransformHandle\TransformScale.h">
+      <Filter>World\TransformHandle</Filter>
+    </ClInclude>
+    <ClInclude Include="World\TransformHandle\TransformRotation.h">
+      <Filter>World\TransformHandle</Filter>
+    </ClInclude>
+    <ClInclude Include="World\TransformHandle\TransformPosition.h">
+      <Filter>World\TransformHandle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Data\shaders\ffx_a.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Data\shaders\ffx_cas.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Data\shaders\ffx_fsr1.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Data\shaders\ffx_spd.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Data\shaders\Fxaa3_11.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Data\shaders\Common.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Common_vertex_pixel.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Common_buffer.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Common_sampler.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Common_texture.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Common_struct.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Color.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Bloom.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Blur.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\BRDF.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\BRDF_specular_lut.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Chromatic_aberration.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Copy.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Debanding.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Debug_reflection_probe.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Depth_light.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Depth_of_field.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Depth_prepass.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Entity.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Film_grain.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Fog.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Font.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Fullscreen_triangle.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\FXAA.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Parallax_mapping.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\GBuffer.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Quad.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Reflection_probe.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Scaling.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Screen_space_shadows.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Shadow_mapping.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\SSAO.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\SSR.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Temporal_antialiasing.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Tone_mapping.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\AMD_FidelityFX_CAS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\AMD_FidelityFX_FSR.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\AMD_FidelityFX_SPD.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\ImGui.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Light.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Light_composition.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Light_image_based.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Data\shaders\Motion_blur.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

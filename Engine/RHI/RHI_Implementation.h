@@ -1,0 +1,147 @@
+#pragma once
+
+#pragma comment(lib, "d3d11.lib")
+#pragma comment(lib, "dxgi.lib")
+#pragma comment(lib, "d3dcompiler.lib")
+
+#include <d3d11_4.h>
+
+static const D3D11_CULL_MODE d3d11_cull_mode[] =
+{
+    D3D11_CULL_NONE,
+    D3D11_CULL_FRONT,
+    D3D11_CULL_BACK
+};
+
+static const D3D11_FILL_MODE d3d11_polygon_mode[] =
+{
+    D3D11_FILL_SOLID,
+    D3D11_FILL_WIREFRAME
+};
+
+static const D3D11_PRIMITIVE_TOPOLOGY d3d11_primitive_topology[] =
+{
+    D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST,
+    D3D11_PRIMITIVE_TOPOLOGY_LINELIST
+};
+
+static const DXGI_FORMAT d3d11_format[] =
+{
+    // R
+    DXGI_FORMAT_R8_UNORM,
+    DXGI_FORMAT_R8_UINT,
+    DXGI_FORMAT_R16_UNORM,
+    DXGI_FORMAT_R16_UINT,
+    DXGI_FORMAT_R16_FLOAT,
+    DXGI_FORMAT_R32_UINT,
+    DXGI_FORMAT_R32_FLOAT,
+    // RG
+    DXGI_FORMAT_R8G8_UNORM,
+    DXGI_FORMAT_R16G16_FLOAT,
+    DXGI_FORMAT_R32G32_FLOAT,
+    // RGB
+    DXGI_FORMAT_R11G11B10_FLOAT,
+    DXGI_FORMAT_R32G32B32_FLOAT,
+    // RGBA
+    DXGI_FORMAT_R8G8B8A8_UNORM,
+    DXGI_FORMAT_R10G10B10A2_UNORM,
+    DXGI_FORMAT_R16G16B16A16_UNORM,
+    DXGI_FORMAT_R16G16B16A16_SNORM,
+    DXGI_FORMAT_R16G16B16A16_FLOAT,
+    DXGI_FORMAT_R32G32B32A32_FLOAT,
+    // Depth
+    DXGI_FORMAT_D16_UNORM,
+    DXGI_FORMAT_D32_FLOAT,
+    DXGI_FORMAT_D32_FLOAT_S8X24_UINT,
+    // Compressed
+    DXGI_FORMAT_BC7_UNORM,
+    DXGI_FORMAT_UNKNOWN,
+
+    DXGI_FORMAT_UNKNOWN
+};
+
+static const D3D11_TEXTURE_ADDRESS_MODE d3d11_sampler_address_mode[] =
+{
+    D3D11_TEXTURE_ADDRESS_WRAP,
+    D3D11_TEXTURE_ADDRESS_MIRROR,
+    D3D11_TEXTURE_ADDRESS_CLAMP,
+    D3D11_TEXTURE_ADDRESS_BORDER,
+    D3D11_TEXTURE_ADDRESS_MIRROR_ONCE
+};
+
+static const D3D11_COMPARISON_FUNC d3d11_comparison_function[] =
+{
+    D3D11_COMPARISON_NEVER,
+    D3D11_COMPARISON_LESS,
+    D3D11_COMPARISON_EQUAL,
+    D3D11_COMPARISON_LESS_EQUAL,
+    D3D11_COMPARISON_GREATER,
+    D3D11_COMPARISON_NOT_EQUAL,
+    D3D11_COMPARISON_GREATER_EQUAL,
+    D3D11_COMPARISON_ALWAYS
+};
+
+static const D3D11_STENCIL_OP d3d11_stencil_operation[] =
+{
+    D3D11_STENCIL_OP_KEEP,
+    D3D11_STENCIL_OP_ZERO,
+    D3D11_STENCIL_OP_REPLACE,
+    D3D11_STENCIL_OP_INCR_SAT,
+    D3D11_STENCIL_OP_DECR_SAT,
+    D3D11_STENCIL_OP_INVERT,
+    D3D11_STENCIL_OP_INCR,
+    D3D11_STENCIL_OP_DECR
+};
+
+static const D3D11_BLEND d3d11_blend_factor[] =
+{
+    D3D11_BLEND_ZERO,
+    D3D11_BLEND_ONE,
+    D3D11_BLEND_SRC_COLOR,
+    D3D11_BLEND_INV_SRC_COLOR,
+    D3D11_BLEND_SRC_ALPHA,
+    D3D11_BLEND_INV_SRC_ALPHA,
+    D3D11_BLEND_DEST_ALPHA,
+    D3D11_BLEND_INV_DEST_ALPHA,
+    D3D11_BLEND_DEST_COLOR,
+    D3D11_BLEND_INV_DEST_COLOR,
+    D3D11_BLEND_SRC_ALPHA_SAT,
+    D3D11_BLEND_BLEND_FACTOR,
+    D3D11_BLEND_INV_BLEND_FACTOR,
+    D3D11_BLEND_SRC1_COLOR,
+    D3D11_BLEND_INV_SRC1_COLOR,
+    D3D11_BLEND_SRC1_ALPHA,
+    D3D11_BLEND_INV_SRC1_ALPHA
+};
+
+static const D3D11_BLEND_OP d3d11_blend_operation[] =
+{
+    D3D11_BLEND_OP_ADD,
+    D3D11_BLEND_OP_SUBTRACT,
+    D3D11_BLEND_OP_REV_SUBTRACT,
+    D3D11_BLEND_OP_MIN,
+    D3D11_BLEND_OP_MAX
+};
+
+#include "RHI_Definition.h"
+#include "D3D11/D3D11_Utility.h"
+
+
+namespace PlayGround
+{
+    struct RHI_Context
+    {
+        std::string api_version;
+
+        RHI_Api_Type api_type = RHI_Api_Type::D3d11;
+        ID3D11Device5* device = nullptr;
+        ID3D11DeviceContext4* device_context = nullptr;
+        ID3DUserDefinedAnnotation* annotation = nullptr;
+
+#ifdef _DEBUG
+        bool debug = true;
+        bool gpu_markers = true;
+        bool profiler = true;
+#endif // _DEBUG
+    };
+}

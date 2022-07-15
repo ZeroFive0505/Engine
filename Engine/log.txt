@@ -1,0 +1,63 @@
+Info: PlayGround::Threading::Threading : 7 threads have been created
+Info: PlayGround::RHI_Device::RegisterPhysicalDevice : NVIDIA GeForce GTX 1060, (6052 MB)
+Info: PlayGround::RHI_Device::RegisterPhysicalDevice : Intel(R) HD Graphics 630, (128 MB)
+Info: PlayGround::RHI_Device::RegisterPhysicalDevice : Microsoft Basic Render Driver, (0 MB)
+Info: PlayGround::Timer::SetFPSLimit : Set to 60.00 FPS
+Info: PlayGround::RHI_Device::SetPrimaryPhysicalDevice : NVIDIA GeForce GTX 1060 (6052 MB)
+Info: PlayGround::RHI_Device::RHI_Device : DirectX 11.1
+Info: PlayGround::Renderer::SetResolutionRender : Render resolution has been set to 1536x798
+Info: PlayGround::Renderer::SetResolutionOutput : Output resolution output has been set to 1536x798
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\gbuffer.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\light.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\fullscreen_triangle.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\quad.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\depth_prepass.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\depth_light.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\brdf_specular_lut.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\copy.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\blur.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\bloom.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\film_grain.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\chromatic_aberration.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\tone_mapping.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\temporal_antialiasing.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\fxaa.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\depth_of_field.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\motion_blur.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\debanding.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\ssao.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\light_composition.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\light_image_based.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\ssr.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\entity.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\font.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\color.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\reflection_probe.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\amd_fidelityfx_cas.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\amd_fidelityfx_spd.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\amd_fidelityfx_fsr.hlsl" doesn't exist.
+Error PlayGround::RHI_Shader::Compile : "Data\shaders\debug_reflection_probe.hlsl" doesn't exist.
+Info: PlayGround::Renderer::CreateRenderTextures : Taa history resolution has been set to 1536x798
+Error PlayGround::ft_helper::handle_error : FreeType: Cannot open resource.
+Error PlayGround::ft_helper::handle_error : FreeType: Invalid face handle.
+Error PlayGround::Font::LoadFromFile : Failed to load font "Data\fonts/CalibriBold.ttf"
+Info: PlayGround::Renderer::CreateSamplers : Mip load bias set to -0.000000
+Error PlayGround::RHI_Texture::LoadFromFile : "Data\textures/noise_normal.png" is not a valid file path.
+Error PlayGround::RHI_Texture::LoadFromFile : "Data\textures/noise_blue_0.png" is not a valid file path.
+Error PlayGround::RHI_Texture::LoadFromFile : "Data\textures/white.png" is not a valid file path.
+Error PlayGround::RHI_Texture::LoadFromFile : "Data\textures/black.png" is not a valid file path.
+Error PlayGround::RHI_Texture::LoadFromFile : "Data\textures/transparent.png" is not a valid file path.
+Error PlayGround::RHI_Texture::LoadFromFile : "Data\textures/sun.png" is not a valid file path.
+Error PlayGround::RHI_Texture::LoadFromFile : "Data\textures/light_bulb.png" is not a valid file path.
+Error PlayGround::RHI_Texture::LoadFromFile : "Data\textures/flashlight.png" is not a valid file path.
+Info: PlayGround::Settings::OnPostInit : Resolution: 1536x798.
+Info: PlayGround::Settings::OnPostInit : FPS Limit: 60.000000.
+Info: PlayGround::Settings::OnPostInit : Shadow resolution: 2048.
+Info: PlayGround::Settings::OnPostInit : Anisotropy: 16.
+Info: PlayGround::Settings::OnPostInit : Max threads: 8.
+Error PlayGround::Window::Update : Unhandled window event
+Info: PlayGround::Environment::SetFromTextureSphere : Loading sky sphere...
+Error PlayGround::RHI_Texture::LoadFromFile : "Data\environment/syferfontein_0d_clear_4k.hdr" is not a valid file path.
+Error PlayGround::Environment::SetFromTextureSphere : Sky sphere creation failed
+Info: PlayGround::Environment::SetFromTextureSphere : Sky sphere has been created successfully
+Error PlayGround::Audio::LogErrorFmod : The vectors passed in are not unit length, or perpendicular.
