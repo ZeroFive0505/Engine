@@ -308,7 +308,7 @@ namespace PlayGround
                         vertices[indices[(i * 3) + 1]].pos[2] - vertices[indices[(i * 3) + 2]].pos[2]
                     );
 
-                    // 위의 두 벡터를 외적하ㅕㅇ 노말을 구한다.
+                    // 위의 두 벡터를 외적하여 노말을 구한다.
                     face_normals[i] = Vector3::Cross(edge_a, edge_b);
                 }
 

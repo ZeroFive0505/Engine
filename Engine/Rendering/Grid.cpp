@@ -30,7 +30,7 @@ namespace PlayGround
 
 		// 그리드는 1칸씩 떨어지게 배치
 		const float grid_spacing = 1.0f;
-		// 카메라의  위치에 비례해서 이동한다.
+		// 카메라의 위치에 비례해서 스케일링, 이동한다.
 		const Vector3 translation = Vector3(
 			static_cast<int>(camera->GetPosition().x / grid_spacing) * grid_spacing,
 			0.0f,

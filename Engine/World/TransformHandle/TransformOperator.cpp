@@ -69,7 +69,7 @@ namespace PlayGround
                 m_Handle_z.m_Is_editing_prev = m_Handle_z.m_Is_editing;
                 m_Handle_xyz.m_Is_editing_prev = m_Handle_xyz.m_Is_editing;
 
-                // Detect if any of the handles should enter an editing state (on right click pressed)
+                // Detect if any of the handles should enter an editing state (on left click pressed)
                 bool mouse_down = m_Input->GetKeyDown(EKeyCode::Click_Left);
                 m_Handle_x.m_Is_editing = (m_Handle_x.m_Is_hovered && mouse_down) ? true : m_Handle_x.m_Is_editing;
                 m_Handle_y.m_Is_editing = (m_Handle_y.m_Is_hovered && mouse_down) ? true : m_Handle_y.m_Is_editing;

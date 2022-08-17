@@ -18,7 +18,7 @@ namespace PlayGround
 
         // 공백인지
         static bool IsEmptyOrWhitespace(const std::string& var);
-        // 알파벳 또는 숫자인디
+        // 알파벳 또는 숫자인지
         static bool IsAlphanumeric(const std::string& var);
         // #./! 등의 허용되지 않는 문자를 제거한다.
         static std::string RemoveIllegalCharacters(const std::string& text);

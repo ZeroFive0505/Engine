@@ -23,7 +23,6 @@ namespace PlayGround
 	Engine::Engine()
 	{
 		m_Flags |= PhysicsMode;
-		m_Flags |= GameMode;
 
 		// 컨텍스트를 추가
 		m_Context = make_shared<Context>();

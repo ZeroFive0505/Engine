@@ -33,7 +33,7 @@ void Viewport::UpdateVisible()
 	float width = static_cast<float>(ImGui::GetWindowContentRegionMax().x - ImGui::GetWindowContentRegionMin().x);
 	float height = static_cast<float>(ImGui::GetWindowContentRegionMax().y - ImGui::GetWindowContentRegionMin().y);
 
-	// 뷰 포트늬 높이 너비와 현재 높이 너비가 다르면 설정
+	// 뷰 포트의 높이 너비와 현재 높이 너비가 다르면 설정
 	if (m_Width != width || m_Height != height)
 	{
 		m_Renderer->SetViewport(width, height);

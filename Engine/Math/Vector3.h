@@ -50,7 +50,7 @@ namespace PlayGround::Math
 
         void Normalize()
         {
-            const auto length_squared = LengthSquared();
+            const float length_squared = LengthSquared();
             if (!Util::Equals(length_squared, 1.0f) && length_squared > 0.0f)
             {
                 const auto length_inverted = 1.0f / Util::Sqrt(length_squared);

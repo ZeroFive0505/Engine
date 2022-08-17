@@ -94,9 +94,11 @@ namespace PlayGround::Math
         {
             const Vector3 scale = GetScale();
 
+            // 0으로 나누는 경우를 제외한다.
             if (scale.x == 0.0f || scale.y == 0.0f || scale.z == 0.0f) { return Quaternion(0, 0, 0, 1); }
 
             Matrix normalized;
+            // 스케일을 나눠서 정확한 회전을 측정
             normalized.m00 = m00 / scale.x; normalized.m01 = m01 / scale.x; normalized.m02 = m02 / scale.x; normalized.m03 = 0.0f;
             normalized.m10 = m10 / scale.y; normalized.m11 = m11 / scale.y; normalized.m12 = m12 / scale.y; normalized.m13 = 0.0f;
             normalized.m20 = m20 / scale.z; normalized.m21 = m21 / scale.z; normalized.m22 = m22 / scale.z; normalized.m23 = 0.0f;

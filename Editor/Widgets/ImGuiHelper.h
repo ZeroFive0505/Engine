@@ -43,7 +43,7 @@ public:
 
 	void LoadModel(const std::string& file_path) const
 	{
-		// 모들 로딩
+		// 모델 로딩
 		auto resource_cache = g_ResourceCache;
 
 		// 리소스 캐시에서 모델을 로딩을 스레드로 넘긴다.

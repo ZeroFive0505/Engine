@@ -35,6 +35,7 @@ namespace PlayGround::Math
                 }
             }
         }
+
         if (m_origin.x > box.GetMax().x && m_direction.x < 0.0f)
         {
             const float x = (box.GetMax().x - m_origin.x) / m_direction.x;
@@ -60,6 +61,7 @@ namespace PlayGround::Math
                 }
             }
         }
+
         if (m_origin.y > box.GetMax().y && m_direction.y < 0.0f)
         {
             const float x = (box.GetMax().y - m_origin.y) / m_direction.y;
@@ -85,6 +87,7 @@ namespace PlayGround::Math
                 }
             }
         }
+
         if (m_origin.z > box.GetMax().z && m_direction.z < 0.0f)
         {
             const float x = (box.GetMax().z - m_origin.z) / m_direction.z;
@@ -168,19 +171,23 @@ namespace PlayGround::Math
         Vector3 centeredOrigin = m_origin - sphere.center;
         float squaredRadius = sphere.radius * sphere.radius;
 
+        // 레이의 시작지점이 구의 안에 있는지 확인
         if (centeredOrigin.LengthSquared() <= squaredRadius)
             return 0.0f;
 
+        // 근의 공식
         float a = m_direction.Dot(m_direction);
         float b = 2.0f * centeredOrigin.Dot(m_direction);
         float c = centeredOrigin.Dot(centeredOrigin) - squaredRadius;
         float d = b * b - 4.0f * a * c;
 
+        // 0보다 작다면 해는 존재하지 않음
         if (d < 0.0f)
             return Util::INFINITY_;
 
         float dSqrt = sqrtf(d);
         float dist = (-b - dSqrt) / (2.0f * a);
+        // 두가지 근중에 하나를 반환
         if (dist >= 0.0f)
             return dist;
         else

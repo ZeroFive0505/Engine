@@ -324,9 +324,9 @@ namespace PlayGround
 
 		m_mouse_position = position;
 
-		m_keys[start_index_mouse] = (keys_states & SDL_BUTTON(SDL_BUTTON_LEFT)) != 0;    // Left button pressed
-		m_keys[start_index_mouse + 1] = (keys_states & SDL_BUTTON(SDL_BUTTON_MIDDLE)) != 0;  // Middle button pressed
-		m_keys[start_index_mouse + 2] = (keys_states & SDL_BUTTON(SDL_BUTTON_RIGHT)) != 0;   // Right button pressed
+		m_keys[start_index_mouse] = (keys_states & SDL_BUTTON(SDL_BUTTON_LEFT)) != 0;    // 왼쪽 클릭
+		m_keys[start_index_mouse + 1] = (keys_states & SDL_BUTTON(SDL_BUTTON_MIDDLE)) != 0;  // 가운데 클릭
+		m_keys[start_index_mouse + 2] = (keys_states & SDL_BUTTON(SDL_BUTTON_RIGHT)) != 0;   // 오른쪽 클릭
 	}
 
 	void Input::OnEventMouse(void* event_mouse)

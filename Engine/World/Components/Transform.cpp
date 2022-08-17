@@ -20,6 +20,9 @@ namespace PlayGround
         m_Matrix = Matrix::Identity;
         m_LocalMatrix = Matrix::Identity;
         m_PrevMatrix = Matrix::Identity;
+        m_InitPosition = m_LocalPosistion;
+        m_InitRotation = m_LocalRoation;
+        m_InitScale = m_LocalScale;
         m_Parent = nullptr;
         // 더티 플래그의 경우 일단 참으로 초기화
         m_IsDirty = true;
@@ -212,7 +215,7 @@ namespace PlayGround
             SetLocalRotaion((m_LocalRoation * delta).Normalized());
         // 부모가 있을 경우에는 역행렬과 현재 회전치 그리고 회전량을 곱한다.
         else
-            SetLocalRotaion(m_LocalRoation * GetRotation().Inverse() * delta * GetRotation());
+            SetLocalRotaion(m_LocalRoation * GetParent()->GetRotation().Inverse() * delta * GetRotation());
     }
 
     Vector3 Transform::GetUp() const

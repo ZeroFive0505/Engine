@@ -14,7 +14,7 @@ namespace PlayGround
 {
 	AudioClip::AudioClip(Context* context) : IResource(context, EResourceType::Audio)
 	{
-		// 오디오 클립 쵝화
+		// 오디오 클립 초기화
 		m_Transform = nullptr;
 		// 컨텍스트에서 오디오 모듈을 가져온다.
 		m_SystemFMOD = static_cast<System*>(context->GetSubModule<Audio>()->GetSystemFMOD());

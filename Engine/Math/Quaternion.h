@@ -24,6 +24,8 @@ namespace PlayGround::Math
         }
         ~Quaternion() = default;
 
+        // 주어진 각과 축으로 사원수를 만들어낸다.
+        // 각도는 라디안
         static inline Quaternion FromAngleAxis(float angle, const Vector3& axis)
         {
             const float half = angle * 0.5f;
@@ -35,6 +37,7 @@ namespace PlayGround::Math
 
         void FromAxes(const Vector3& xAxis, const Vector3& yAxis, const Vector3& zAxis);
 
+        // 주어진 yaw, pitch, roll의 값으로 사원수를 만들어낸다.
         static inline Quaternion FromYawPitchRoll(float yaw, float pitch, float roll)
         {
             const float halfRoll = roll * 0.5f;
@@ -153,7 +156,7 @@ namespace PlayGround::Math
 
         void Normalize()
         {
-            const auto length_squared = LengthSquared();
+            const float length_squared = LengthSquared();
             if (!Util::Equals(length_squared, 1.0f) && length_squared > 0.0f)
             {
                 const auto length_inverted = 1.0f / Util::Sqrt(length_squared);
@@ -166,7 +169,7 @@ namespace PlayGround::Math
 
         Quaternion Normalized() const
         {
-            const auto length_squared = LengthSquared();
+            const float length_squared = LengthSquared();
             if (!Util::Equals(length_squared, 1.0f) && length_squared > 0.0f)
             {
                 const auto length_inverted = 1.0f / Util::Sqrt(length_squared);

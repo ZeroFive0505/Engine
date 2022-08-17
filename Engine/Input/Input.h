@@ -10,7 +10,7 @@ namespace PlayGround
 {
 	enum class EKeyCode
 	{
-		// Keyboard
+		// 키보드
 		F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15,
 		Alpha0, Alpha1, Alpha2, Alpha3, Alpha4, Alpha5, Alpha6, Alpha7, Alpha8, Alpha9,
 		Keypad0, Keypad1, Keypad2, Keypad3, Keypad4, Keypad5, Keypad6, Keypad7, Keypad8, Keypad9,
@@ -33,12 +33,12 @@ namespace PlayGround
 		End,
 		Insert,
 
-		// Mouse
+		// 마우스
 		Click_Left,
 		Click_Middle,
 		Click_Right,
 
-		// Gamepad
+		// 게임 패드
 		DPad_Up,
 		DPad_Down,
 		DPad_Left,
@@ -68,26 +68,24 @@ namespace PlayGround
         Input(Context* context);
         ~Input() = default;
 
-        //= ISubsystem ========================
         void Update(double delta_time) override;
         void PostUpdate() override;
-        //=====================================
 
-        // Polling driven input
+        // 폴링
         void PollMouse();
         void PollKeyboard();
 
-        // Event driven input
+        // 이벤트
         void OnEvent(const Variant& event_variant);
         void OnEventMouse(void* event_mouse);
         void OnEventController(void* event_controller);
 
-        // Keys
-        bool GetKey(const EKeyCode key) { return m_keys[static_cast<uint32_t>(key)]; }                                // Returns true while the button identified by KeyCode is held down.
-        bool GetKeyDown(const EKeyCode key) { return GetKey(key) && !m_keys_previous_frame[static_cast<uint32_t>(key)]; } // Returns true during the frame the user pressed down the button identified by KeyCode.
-        bool GetKeyUp(const EKeyCode key) { return !GetKey(key) && m_keys_previous_frame[static_cast<uint32_t>(key)]; } // Returns true the first frame the user releases the button identified by KeyCode.
+        // 키 입력
+        bool GetKey(const EKeyCode key) { return m_keys[static_cast<uint32_t>(key)]; }                              
+        bool GetKeyDown(const EKeyCode key) { return GetKey(key) && !m_keys_previous_frame[static_cast<uint32_t>(key)]; } 
+        bool GetKeyUp(const EKeyCode key) { return !GetKey(key) && m_keys_previous_frame[static_cast<uint32_t>(key)]; } 
 
-        // Mouse
+        // 마우스
         void SetMouseCursorVisible(const bool visible);
         bool GetMouseCursorVisible()                            const;
         void SetMouseIsInViewport(const bool is_in_viewport) { m_mouse_is_in_viewport = is_in_viewport; }
@@ -100,34 +98,29 @@ namespace PlayGround
         const Math::Vector2 GetMousePositionRelativeToWindow() const;
         const Math::Vector2 GetMousePositionRelativeToEditorViewport() const;
 
-        // Controller
+        // 컨트롤러
         bool ControllerIsConnected()                        const { return m_controller_connected; }
         const Math::Vector2& GetControllerThumbStickLeft()  const { return m_controller_thumb_left; }
         const Math::Vector2& GetControllerThumbStickRight() const { return m_controller_thumb_right; }
         float GetControllerTriggerLeft()                    const { return m_controller_trigger_left; }
         float GetControllerTriggerRight()                   const { return m_gamepad_trigger_right; }
-        // Vibrate the gamepad.
-        // Motor speed range is from 0.0 to 1.0f.
-        // The left motor is the low-frequency rumble motor.
-        // The right motor is the high-frequency rumble motor. 
-        // The two motors are not the same, and they create different vibration effects.
         bool GamepadVibrate(const float left_motor_speed, const float right_motor_speed) const;
 
     private:
-        // Keys
+        // 키
         std::array<bool, 107> m_keys;
         std::array<bool, 107> m_keys_previous_frame;
         uint32_t start_index_mouse = 83;
         uint32_t start_index_gamepad = 86;
 
-        // Mouse
+        // 마우스
         Math::Vector2 m_mouse_position = Math::Vector2::Zero;
         Math::Vector2 m_mouse_delta = Math::Vector2::Zero;
         Math::Vector2 m_mouse_wheel_delta = Math::Vector2::Zero;
         Math::Vector2 m_editor_viewport_offset = Math::Vector2::Zero;
         bool m_mouse_is_in_viewport = true;
 
-        // Controller
+        // 컨트롤러
         void* m_controller = nullptr;
         bool m_controller_connected = false;
         Math::Vector2 m_controller_thumb_left = Math::Vector2::Zero;
